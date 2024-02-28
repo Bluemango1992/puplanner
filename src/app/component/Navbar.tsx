@@ -1,29 +1,28 @@
 import React from 'react'
-import { AppBar, Toolbar, Typography, Box, Button, MenuItem } from "@mui/material";
+import { MenuItem } from "@mui/material";
 import Link from 'next/link'
 import Image from 'next/image'
+import Button from './Button';
+import Box from './Box';
+import Typography from '../Typography/page';
 
 const pages = ['How it works', 'Pricing', 'FAQ'];
 
 const Navbar = () => {
   return (
-    <div className="bg-slate-100">
-        <div className="flex flex-row items-center justify-between ml-24 mr-24 p-1">
+        <div className="flex flex-row items-center justify-between ml-24 mr-24 p-3">
           <Link href="/">
-          <Image src="/logo.png" alt="dog-walking" width={50} height={50} />
+          <Image src="/logo.png" alt="dog-walking" width={40} height={40} />
           </Link>
-          <Box sx={{ display: "flex", flexDirection: "row", gap: 2 }}>
+          <div className="flex gap-6 to-inherit">
           {pages.map((page) => (
-                <MenuItem key={page}>
-                  <Typography textAlign="center">{page}</Typography>
-                </MenuItem>
+                <Button variant="text">{page}</Button>
               ))}
               <Link href="/login">
-              <Button variant="outlined" color="secondary">Login</Button>
+              <Button variant="secondary">Login</Button>
               </Link>
-          </Box>
+          </div>
         </div>
-      </div>
   )
 }
 

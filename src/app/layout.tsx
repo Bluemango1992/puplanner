@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
-import { Manrope } from "next/font/google";
+import { Vollkorn } from '@next/font/google';
 import "./globals.css";
 
-const inter = Manrope({ subsets: ["latin"] });
+const inter = Vollkorn({
+  subsets: ['latin'],
+  weight: '600',
+});
 
 export const metadata: Metadata = {
   title: "Puplanner",

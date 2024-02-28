@@ -5,7 +5,7 @@ interface ContainerProps {
 
 const Container = ({ children }: ContainerProps) => {
     return (
-        <div className="bg-slate-200 my-12 mx-24">
+        <div className="my-12 mx-24">
             {children}
         </div>
     );

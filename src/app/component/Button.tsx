@@ -1,0 +1,43 @@
+import React from 'react';
+
+interface ButtonProps {
+  variant: 'primary' | 'secondary' | 'text' | 'outlined';
+  size?: 'big' | 'medium' | 'small' | 'full';
+  onClick?: () => void;
+  children: React.ReactNode;
+  type?: 'button' | 'submit' | 'reset';
+}
+
+const Button: React.FC<ButtonProps> = ({
+  variant,
+  size = 'medium',
+  onClick,
+  children,
+}) => {
+  // Tailwind classes for variants using default colors
+  const variantClasses = {
+    primary: 'bg-orange-900 text-orange-100 hover:bg-orange-800',
+    secondary: 'bg-orange-800 text-white',
+    text: 'text-orange-400 bg-transparent text-orange-900 hover:bg-orange-50',
+    outlined: 'border-2 border-orange-400 bg-transparent',
+  };
+
+  // Tailwind classes for sizes
+  const sizeClasses = {
+    big: 'px-8 py-4 text-lg',
+    medium: 'px-6 py-2 text-md',
+    small: 'px-4 py-1 text-sm',
+    full: 'w-full px-8 py-3 text-md',
+  };
+
+  // Combine all relevant classes
+  const classes = `${variantClasses[variant]} ${sizeClasses[size]} font-medium rounded cursor-pointer`;
+
+  return (
+    <button className={classes} onClick={onClick} type="button">
+      {children}
+    </button>
+  );
+};
+
+export default Button;
