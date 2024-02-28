@@ -4,7 +4,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import Button from './Button';
 import Box from './Box';
-import Typography from '../Typography/page';
+import Typography from '../Typography/typograph';
 
 const pages = ['How it works', 'Pricing', 'FAQ'];
 

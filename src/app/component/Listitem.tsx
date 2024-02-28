@@ -1,5 +1,5 @@
 import React from 'react';
-import Typography from '../Typography/page';
+import Typography from '../Typography/typograph';
 
 interface ListItemProps {
     title: string;

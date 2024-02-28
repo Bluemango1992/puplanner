@@ -1,7 +1,7 @@
 import { Container, Navbar, Box, Paper, ListItem } from '@/app/component'
 import Link from 'next/link'
 import { Button } from '@mui/material'
-import Typography from '@/app/Typography/page'
+import Typography from '@/app/Typography/typograph'
 import React from 'react'
 import Calendar from '../../component/Calendar/index'
 

@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import TextareaAutosize from '@mui/material/TextareaAutosize'
 import { Box, Container, Paper, ListItem, Navbar, Chiplist, Button } from '../../component'
-import Typography from '../../Typography/page'
+import Typography from '../../Typography/typograph'
 import Chip from '@mui/material/Chip'
 
 const page = () => {

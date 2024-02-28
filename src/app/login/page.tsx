@@ -2,7 +2,7 @@ import React from "react";
 import { Button, TextField } from "@mui/material";
 import Link from 'next/link'
 import Navbar from "../component/Navbar";
-import Typography from "../Typography/page";
+import Typography from "../Typography/typograph";
 import { Paper, Container, Box } from "../component";
 
 

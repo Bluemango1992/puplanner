@@ -3,7 +3,7 @@ import Navbar from '../../component/Navbar'
 import Container from '@/app/component/Container'
 import Paper from '@/app/component/Paper'
 import Box from '@/app/component/Box'
-import Typography from '../../Typography/page'
+import Typography from '../../Typography/typograph'
 import Link from 'next/link'
 import { Button, FormControl, FormLabel, RadioGroup, FormControlLabel, Radio } from '@mui/material'
 

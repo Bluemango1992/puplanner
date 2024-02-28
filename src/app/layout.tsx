@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Vollkorn } from '@next/font/google';
+import { Vollkorn } from "next/font/google";
 import "./globals.css";
 
 const inter = Vollkorn({

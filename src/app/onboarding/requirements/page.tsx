@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { Button, Chip, duration } from '@mui/material'
 import TextareaAutosize from '@mui/material/TextareaAutosize'
 import { Box, Container, Paper, ListItem, Navbar, Chiplist } from '../../component'
-import Typography from '../../Typography/page'
+import Typography from '../../Typography/typograph'
 
 
 

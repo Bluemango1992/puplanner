@@ -2,7 +2,7 @@ import React from 'react'
 import { Container, Paper, Box, Navbar, ListItem } from '../../component'
 import Link from 'next/link'
 import { Button } from '@mui/material'
-import Typography from '../../Typography/page'
+import Typography from '../../Typography/typograph'
 
 
 const page = () => {

@@ -3,7 +3,7 @@ import { Box, Button } from "./component";
 import Image from 'next/image'
 import Navbar from "./component/Navbar";
 import Link from "next/link";
-import Typography from "./Typography/page";
+import Typography from "./Typography/typograph";
 
 export default function Home() {
 
@@ -32,7 +32,6 @@ export default function Home() {
                   src='/dog.jpeg'
                   width={500}
                   height={500}
-                  layout="responsive"
                   className="rounded-3xl shadow-lg"
                 />
             </Box>
