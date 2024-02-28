@@ -31,7 +31,7 @@ export default function Home() {
                   alt='Mountains'
                   src='/dog.jpeg'
                   width={500}
-                  height={500}
+                  height={350}
                   className="rounded-3xl shadow-lg"
                 />
             </Box>
