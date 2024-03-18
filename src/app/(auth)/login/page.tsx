@@ -1,9 +1,9 @@
 import React from "react";
 import { TextField } from "@mui/material";
 import Link from 'next/link'
-import Navbar from "../component/Navbar";
-import Typography from "../Typography/typograph";
-import { Container, Box, Button, Divider} from "../component";
+import Navbar from "../../component/Navbar";
+import Typography from "../../Typography/typograph";
+import { Container, Box, Button, Divider} from "../../component";
 
 
 export default function Login() {
@@ -18,7 +18,11 @@ export default function Login() {
             <Typography variant="h1">Welcome Back!</Typography>
             <TextField placeholder="Email" fullWidth variant="outlined" />
             <TextField placeholder="Password" type="password" fullWidth variant="outlined" />
+            <div className="flex flex-1">
+            <Link href="/dashboard">
             <Button variant="primary" size="full">Login</Button>
+            </Link>
+            </div>
             <Link href="/forgot-password">
             <Button variant="text" size="full">Forgot Password?</Button>
             </Link>

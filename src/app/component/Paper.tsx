@@ -6,7 +6,7 @@ type PaperProps = {
 
 const Paper: React.FC<PaperProps> = ({ children }) => {
     return (
-        <div className="bg-white shadow-md rounded-md">  
+        <div className=" bg-slate-50 shadow-md rounded-md min-w-80">
             {children}
         </div>
     );

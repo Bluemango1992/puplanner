@@ -1,8 +1,8 @@
 import React from 'react';
-import { Container, Box, Navbar } from '../component';
-import { Button } from '../component';
+import { Container, Box, Navbar } from '../../component';
+import { Button } from '../../component';
 import Link from 'next/link';
-import Typography from '../Typography/typograph';
+import Typography from '../../Typography/typograph';
 
 interface PageProps {
     // Add any props you need here

@@ -4,6 +4,8 @@ interface ContainerProps {
   };
 
 const Container = ({ children }: ContainerProps) => {
+
+
     return (
         <div className="my-12 mx-24">
             {children}

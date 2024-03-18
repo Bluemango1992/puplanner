@@ -13,7 +13,6 @@ const Typography: React.FC<TypographyProps> = ({ variant, children, align = "lef
     const Component = variantMap[variant] || 'span';
 
     // Determine Tailwind's margin-bottom class based on the variant
-    const marginBottomClass = variantMarginBottomMap[variant] || '';
 
     const textColorClass = textColorMap[variant] || '';
 
@@ -21,7 +20,7 @@ const Typography: React.FC<TypographyProps> = ({ variant, children, align = "lef
     const textAlignClass = `text-${align}`;
 
     // Combine Tailwind classes
-    const tailwindClasses = `${marginBottomClass} ${textAlignClass} ${textColorClass} leading-normal tracking-wide font-medium`;
+    const tailwindClasses = ` ${textAlignClass} ${textColorClass} leading-normal tracking-wide font-medium mb-1`;
 
     // Return the component with the appropriate element, Tailwind classes, and styling
     return <Component className={tailwindClasses}>{children}</Component>;
@@ -43,21 +42,6 @@ const variantMap: Record<TypographyProps['variant'], React.ElementType> = {
     overline: 'span'
 };
 
-// Mapping of variants to Tailwind's margin-bottom classes
-const variantMarginBottomMap: Record<TypographyProps['variant'], string> = {
-    h1: 'mb-7', // example margin-bottom for h1
-    h2: 'mb-6',
-    h3: 'mb-5',
-    h4: 'mb-4',
-    h5: 'mb-3',
-    h6: 'mb-3',
-    subtitle1: 'mb-2',
-    subtitle2: 'mb-2',
-    body1: 'mb-1',
-    body2: 'mb-1',
-    caption: 'mb-1',
-    overline: 'mb-1'
-};
 
 const textColorMap: Record<TypographyProps['variant'], string> = {
     h1: 'text-orange-900',

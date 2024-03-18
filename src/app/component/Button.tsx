@@ -18,7 +18,7 @@ const Button: React.FC<ButtonProps> = ({
     primary: 'bg-orange-900 text-orange-100 hover:bg-orange-800',
     secondary: 'bg-orange-800 text-white',
     text: 'text-orange-400 bg-transparent text-orange-900 hover:bg-orange-50',
-    outlined: 'border-2 border-orange-400 bg-transparent',
+    outlined: 'border-2 border-orange-900 text-orange-900 hover:bg-orange-50',
   };
 
   // Tailwind classes for sizes
@@ -30,7 +30,7 @@ const Button: React.FC<ButtonProps> = ({
   };
 
   // Combine all relevant classes
-  const classes = `${variantClasses[variant]} ${sizeClasses[size]} font-medium rounded cursor-pointer`;
+  const classes = `${variantClasses[variant]} ${sizeClasses[size]} font-medium rounded cursor-pointer min-w-[100px] mt-4`;
 
   return (
     <button className={classes} onClick={onClick}>

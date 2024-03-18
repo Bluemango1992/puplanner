@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { Button } from '@mui/material'
 import Typography from '@/app/Typography/typograph'
 import React from 'react'
-import Calendar from '../../component/Calendar/index'
+import Calendar from '../../../component/Calendar/index'
 
 
 const page = () => {

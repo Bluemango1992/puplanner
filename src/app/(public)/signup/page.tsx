@@ -2,9 +2,9 @@
 
 import React, { useState } from 'react';
 import { TextField } from '@mui/material';
-import { Button, Container, Divider, Paper, Box, Navbar } from '../component';
+import { Button, Container, Divider, Paper, Box, Navbar } from '../../component';
 import Link from 'next/link';
-import Typography from '../Typography/typograph';
+import Typography from '../../Typography/typograph';
 import { useRouter } from 'next/navigation'; // Adjusted import for use within the `app` directory or specific Next.js contexts
 
 
@@ -20,6 +20,7 @@ export default function Signup() {
         email: '',
         password: '',
     });
+    const [showPassword, setShowPassword] = useState(false);
 
 
     const router = useRouter(); 
@@ -59,11 +60,15 @@ export default function Signup() {
         }
     };
 
+    const handleCheckboxChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setShowPassword(e.target.checked);
+    }
+
     return (
         <>
         <Navbar />
         <Container>
-            <div className='flex gap-6'>
+            <div className='flex gap-6 align-center justify-center h-full'>
                 <Box align='center' items='start' className='flex-1 flex-col'>
                 <Typography variant="h1">Welcome to Puplanner - Your Partner in Pet Care!</Typography>
                 <Typography variant="caption">Join us for a seamless experience in managing your dog's walks. With Puplanner, enjoy convenience, trusted walkers, and smart scheduling at your fingertips. Sign up today for happier walks and a happier pup!</Typography>
@@ -78,6 +83,7 @@ export default function Signup() {
                     onChange={(e) => setFirstName(e.target.value)} 
                     error={!!errors.firstName}
                     helperText={errors.firstName}
+                    size='small'
                 />
                 <TextField 
                     placeholder="Last Name" 
@@ -87,6 +93,7 @@ export default function Signup() {
                     onChange={(e) => setLastName(e.target.value)} 
                     error={!!errors.lastName}
                     helperText={errors.lastName}
+                    size='small'
                 />
                 <TextField 
                     placeholder="Email" 
@@ -96,16 +103,29 @@ export default function Signup() {
                     onChange={(e) => setEmail(e.target.value)} 
                     error={!!errors.email}
                     helperText={errors.email}
+                    size='small'
                 />
-                <TextField 
-                    placeholder="Password" 
-                    fullWidth 
-                    variant="outlined" 
-                    value={password} 
-                    onChange={(e) => setPassword(e.target.value)} 
-                    error={!!errors.password}
-                    helperText={errors.password}
+                <TextField
+                type={showPassword ? 'text' : 'password'}
+                placeholder="Password"
+                fullWidth
+                variant="outlined"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                error={!!errors.password}
+                helperText={errors.password}
+                size='small'
+            />
+            <div className="flex flex-1 justify-end items-center gap-2">
+                <input
+                    type="checkbox"
+                    id="show-password"
+                    name="show-password"
+                    checked={showPassword}
+                    onChange={handleCheckboxChange}
                 />
+                <label htmlFor="show-password">Show Password</label>
+            </div>
                         <button type="submit" className="bg-orange-900 hover:bg-orange-700 text-orange-50 py-3 px-4 rounded">Sign Up</button>
                 </form>
                     <Typography variant="subtitle2">By signing up, you agree to our Terms of Service and Privacy Policy</Typography>

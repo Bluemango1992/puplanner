@@ -13,9 +13,8 @@ body {
 }
 
 button {
-  margin: 0;
-  border: 0;
-  outline: none;
+  cursor: pointer;
+  border : none;
 }
 
 

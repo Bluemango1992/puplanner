@@ -7,3 +7,4 @@ export { default as Paper } from './Paper';
 export { default as Navbar } from './Navbar';
 export { default as Button } from './Button';
 export { default as TabBar } from './TabBar';
+export { default as Calendar } from './Calendar';

@@ -7,17 +7,12 @@ import './Calendar.css'
 import Button from '@mui/material/Button';
 import { CLOSING_TIMES, INTERVAL, OPENING_TIMES } from '@/app/constants/config';
 
-
-interface CalendarProps {
-    
-}
-
 type DateType = {
   justDate: Date | null
   justTime: Date | null
 }
 
-const Calendar: React.FC<CalendarProps> = () => {
+const Calendar: React.FC = () => {
 
   const [date, setDate] = useState<DateType>({
     justDate: null,
@@ -51,7 +46,7 @@ const Calendar: React.FC<CalendarProps> = () => {
             {date.justDate ? (
         <div className='flex flex-wrap gap-4'>
           {times?.map((time, i) => (
-            <div key={'time-' + i} className='rounded-md bg-slate-100 p-2'>
+            <div key={'time-' + i}>
               <Button onClick={() => setDate((prev) => ({ ...prev, justTime: time }))}>
                 {format(time, 'kk:mm')}
               </Button>
