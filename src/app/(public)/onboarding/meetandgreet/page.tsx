@@ -1,9 +1,8 @@
-import { Container, Navbar, Box, Paper, ListItem } from '@/app/component'
+import { Container, Navbar, Box, Paper, ListItem, Button } from '@/app/component'
 import Link from 'next/link'
-import { Button } from '@mui/material'
 import Typography from '@/app/Typography/typograph'
 import React from 'react'
-import Calendar from '../../../component/Calendar/index'
+
 
 
 const page = () => {
@@ -12,7 +11,6 @@ const page = () => {
         <Navbar />
     <Container>
         <div className='flex justify-center items-center'>
-            <div className='w-1/2'>
                 <Paper>
                 <Box flex="flex-col" align="left" items="center">
                         <Typography variant="h1">Schedule Your Meet and Greet Session</Typography>
@@ -27,14 +25,13 @@ const page = () => {
                         
                         <div className="flex items-center justify-between gap-6 mt-3 px-6 py-7">
                         <Link href="/onboarding/requirements">
-                            <Button variant="text" color="primary" fullWidth>Back</Button>
+                            <Button variant="text">Back</Button>
                         </Link>
                         <Link href="/onboarding/confirmation">
-                            <Button variant="contained" color="primary" fullWidth>Book Meet</Button>
+                            <Button variant="text">Next</Button>
                         </Link>
                         </div>  
                 </Paper>
-                </div>
         </div>
     </Container>
     </>
@@ -42,3 +39,21 @@ const page = () => {
 }
 
 export default page
+
+const Calendar = () => {
+    return (
+        <div className='flex flex-col gap-6'>
+            <Typography variant='h2'>Select a Date and Time</Typography>
+            <div className='flex flex-row gap-6'>
+                <Button variant='outlined'>Today</Button>
+                <Button variant='outlined'>Tomorrow</Button>
+                <Button variant='outlined'>This Week</Button>
+            </div>
+            <div className='flex flex-row gap-6'>
+                <Button variant='outlined'>Next Week</Button>
+                <Button variant='outlined'>This Month</Button>
+                <Button variant='outlined'>Next Month</Button>
+            </div>
+        </div>
+    )
+}

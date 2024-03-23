@@ -1,11 +1,8 @@
 import type { Metadata } from "next";
-import { Vollkorn } from "next/font/google";
+import { Manrope } from "next/font/google";
 import "./globals.css";
 
-const inter = Vollkorn({
-  subsets: ['latin'],
-  weight: '600',
-});
+const font = Manrope({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: "Puplanner",
@@ -19,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={font.className}>{children}</body>
     </html>
   );
 }

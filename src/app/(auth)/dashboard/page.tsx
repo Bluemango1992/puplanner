@@ -1,58 +1,56 @@
-import Typography from '@/app/Typography/typograph'
-import { Container, Navbar, Button, Paper, Calendar } from '@/app/component'
+import { Container, Navbar, Paper } from '@/app/component'
 import React from 'react'
+import BookingsSlots from '../../component/BookingSlots/_layout'
+import CustomerProfileCard from '@/app/component/Cards/CustomerProfileCard'
 
-const user = {
-  name: 'John Doe'
-}
 
 function Dashboard() {
 
-  const IsUserBookedwalks = false
+
+  const customerData = [
+    {
+      "user_id": 1,
+      "name": "Jane Doe",
+      "email": "jane.doe@example.com",
+      "phone": "123-456-7890",
+      "communicationPreferences": [
+        "Email",
+        "PhoneCall"
+      ],
+      "petProfiles": [
+        {
+          "petName": "Rex",
+          "breed": "Labrador",
+          "age": 5,
+          "size": "Large",
+          "neutered": true,
+          "healthConditions": [
+            "None"
+          ],
+          "behavioralNotes": [
+            "Fear of loud noises"
+          ],
+          "walkFrequency": "Daily",
+          "walkDuration": "30 minutes",
+          "preferredWalkTimeOfDay": "Morning"
+        }
+      ],
+      "id": "7326"
+    }
+  ];
 
   return (
     <>
     <Navbar />
     <Container>
-      <div className='flex justify-center gap-6'>
-        { IsUserBookedwalks ? 
-        <Paper>
-            <div className='flex flex-col p-6'>
-          <Typography variant="h1">
-            Welcome to Back {user.name}!
-          </Typography>
-            <Button variant="primary">Book a Walk</Button>
-            </div>
-        </Paper>
-         : <Paper>
-          <div className='flex flex-col p-6'>
-          <Calendar />
-          </div>  
-          </Paper>
-        }
-      <Basket />
-      </div>
+      <CustomerProfileCard customerData={customerData} />
+        <div className="p-6 h-96">
+      <BookingsSlots />
+        </div>
     </Container>
     </>
   )
 }
 
 export default Dashboard
-
-const Basket = () => {
-  return (
-    <Paper>
-      <div className='flex flex-col p-6'>
-      <Typography variant="h3">Basket</Typography>
-      <Typography variant="h4">Total: £0.00</Typography>
-      <Button variant="primary">Checkout</Button>
-      </div>
-      <div className='flex flex-col p-6'>
-          <Typography variant="h3">Booked walks</Typography>
-          <Typography variant="h4">Guide price</Typography>
-          <Button variant="outlined">Book a Walk</Button>
-      </div>
-    </Paper>
-  )
-}
 

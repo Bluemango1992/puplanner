@@ -1,12 +1,7 @@
 import React from 'react'
-import Navbar from '../../../component/Navbar'
-import Container from '@/app/component/Container'
-import Paper from '@/app/component/Paper'
-import Box from '@/app/component/Box'
-import Typography from '../../../Typography/typograph'
+import { Container, Navbar, Paper, Box, Button, TextField } from '@/app/component'
 import Link from 'next/link'
-import { Button, TextField } from '@mui/material'
-
+import Typography from '@/app/Typography/typograph'
 
 
 const page = () => {
@@ -22,17 +17,17 @@ const page = () => {
                         <Typography variant="body1">We want to get to know your dog a bit better! This information will help us ensure they get the most enjoyable and suitable walks. Please tell us about your dog</Typography>
                         </Box>
                         <Box>
-                            <TextField placeholder="Dog's Name" fullWidth variant="outlined" />
-                            <TextField placeholder="Breed" fullWidth variant="outlined" />
-                            <TextField placeholder="Age" fullWidth variant="outlined" />
-                            <TextField placeholder="Weight" fullWidth variant="outlined" />
+                            <TextField placeholder="Dog's Name" fullWidth variant="outlined" type="text" />
+                            <TextField placeholder="Breed" fullWidth variant="outlined" type="text" />
+                            <TextField placeholder="Age" fullWidth variant="outlined" type="number" />
+                            <TextField placeholder="Weight" fullWidth variant="outlined" type="number" />
                         </Box>
                         <div className="flex items-center justify-between gap-6 mt-3 px-6 py-7">
                         <Link href="/onboarding/owner">
-                            <Button variant="text" color="primary" fullWidth>Back</Button>
+                            <Button variant="text" size='medium'>Back</Button>
                         </Link>
                         <Link href="/onboarding/temperment">
-                            <Button variant="contained" color="primary" fullWidth>Next</Button>
+                            <Button variant="outlined" size='medium'>Next</Button>
                         </Link>
                         </div>
                 </Paper>

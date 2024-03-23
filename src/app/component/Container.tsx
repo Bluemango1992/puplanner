@@ -1,16 +1,20 @@
 
+import React from 'react';
+
 interface ContainerProps {
     children: React.ReactNode;
-  };
+    className?: string;
+};
 
-const Container = ({ children }: ContainerProps) => {
+const Container = ({ children, className }: ContainerProps) => {
 
+    const classes = `my-6 mx-6 h-full md:mx-20 ${className}`;
 
     return (
-        <div className="my-12 mx-24">
+        <div className={classes}>
             {children}
         </div>
     );
-    }
+}
 
- export default Container;
+export default Container;

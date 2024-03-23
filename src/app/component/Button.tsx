@@ -1,10 +1,10 @@
-import React from 'react';
 
 interface ButtonProps {
   variant: 'primary' | 'secondary' | 'text' | 'outlined';
   size?: 'big' | 'medium' | 'small' | 'full';
   onClick?: () => void;
   children: React.ReactNode;
+  disabled?: boolean;
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -12,11 +12,12 @@ const Button: React.FC<ButtonProps> = ({
   size = 'medium',
   onClick,
   children,
+  disabled,
 }) => {
   // Tailwind classes for variants using default colors
   const variantClasses = {
     primary: 'bg-orange-900 text-orange-100 hover:bg-orange-800',
-    secondary: 'bg-orange-800 text-white',
+    secondary: 'bg-orange-500 text-orange-100 hover:bg-orange-400',
     text: 'text-orange-400 bg-transparent text-orange-900 hover:bg-orange-50',
     outlined: 'border-2 border-orange-900 text-orange-900 hover:bg-orange-50',
   };
@@ -30,10 +31,11 @@ const Button: React.FC<ButtonProps> = ({
   };
 
   // Combine all relevant classes
-  const classes = `${variantClasses[variant]} ${sizeClasses[size]} font-medium rounded cursor-pointer min-w-[100px] mt-4`;
+  const classes = `${variantClasses[variant]} ${sizeClasses[size]} font-medium rounded cursor-pointer min-w-[100px]`;
 
   return (
-    <button className={classes} onClick={onClick}>
+    
+    <button className={classes} onClick={onClick} disabled={disabled}>
       {children}
     </button>
   );

@@ -5,7 +5,8 @@ import Paper from '@/app/component/Paper'
 import Box from '@/app/component/Box'
 import Typography from '../../../Typography/typograph'
 import Link from 'next/link'
-import { Button, FormControl, FormLabel, RadioGroup, FormControlLabel, Radio } from '@mui/material'
+import { FormControl, FormLabel, RadioGroup, FormControlLabel, Radio } from '@mui/material'
+import Button from '@/app/component/Button'
 
 
 

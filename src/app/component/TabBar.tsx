@@ -11,7 +11,7 @@ interface TabProps {
   const Tab: React.FC<TabProps> = ({ label, onClick }) => {
     
     return (
-        <Button variant="text" size="medium" onClick={onClick}>
+        <Button variant="text" size="small" onClick={onClick}>
             {label}
         </Button>
         );

@@ -1,9 +1,24 @@
 import React from "react";
-import Chip from "@mui/material/Chip";
 
 interface ChipListProps {
     options: { label: string }[];
   }
+
+const Chip: React.FC<{ label: string; variant: "outlined" | "filled" }> = ({
+    label,
+    variant,
+  }) => {
+    return (
+      <div
+        className={`px-3 py-1 rounded-full ${
+          variant === "outlined" ? "bg-white border border-gray-300" : "bg-gray-300"
+        }`}
+      >
+        {label}
+      </div>
+    );
+  }
+
 
 
 const ChipList: React.FC<ChipListProps> = ({ options }) => {
@@ -17,4 +32,6 @@ const ChipList: React.FC<ChipListProps> = ({ options }) => {
   };
 
 export default ChipList;
+
+
 

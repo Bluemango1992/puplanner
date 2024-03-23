@@ -1,12 +1,18 @@
-import { Spinner } from 'react-bootstrap';
+"use client";
+
+import { Circles } from 'react-loader-spinner';
 
 const Loading: React.FC = () => {
     return (
-        <div className="loading-spinner">
-            <Spinner animation="border" role="status">
-                <span className="sr-only">Loading...</span>
-            </Spinner>
-        </div>
+            <Circles
+                height="40"
+                width="40"
+                color="#4fa94d"
+                ariaLabel="circles-loading"
+                wrapperStyle={{}}
+                wrapperClass=""
+                visible={true}
+            />
     );
 };
 
