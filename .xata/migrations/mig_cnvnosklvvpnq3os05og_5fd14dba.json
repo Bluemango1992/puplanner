@@ -1,0 +1,13 @@
+{
+  "id": "mig_cnvnosklvvpnq3os05og",
+  "parentID": "mig_cnvnja4lvvpnq3os05ng",
+  "checksum": "1:5fd14dbad297b7265e740d25dca66fcf514defe9e2ddfa46a5b41b44afa8305a",
+  "operations": [
+    {
+      "removeColumn": {
+        "column": "name",
+        "table": "users"
+      }
+    }
+  ]
+}

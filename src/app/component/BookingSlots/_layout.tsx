@@ -309,13 +309,12 @@ const removeFromBasket = (slotId: number) => {
 
 return (
   <>
-    <div className="flex flex-1 gap-6 flex-col md:flex-row">
+    <div className="flex flex-1 gap-6 flex-col md:flex-row mb-6">
       <div className="flex flex-1 flex-col">
        <TabBar tabs={formattedTabRanges} onTabClick={handleTabClick} />
        
        <div className="flex flex-col flex-1">
-        
-          <Typography variant="h6" className='mb-2'>
+      <Typography variant="h6" className='mb-2'>
           Morning
         </Typography>
         <div className="flex flex-1">
@@ -396,8 +395,6 @@ const Basket = ({ slots, onRemove }: { slots: Slot[], onRemove: (slotId: number)
     }
     
   };
-
-
 
 
   return (

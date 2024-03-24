@@ -1,0 +1,16 @@
+{
+  "id": "mig_cnvnja4lvvpnq3os05ng",
+  "parentID": "mig_cnvnj34lvvpnq3os05mg",
+  "checksum": "1:b4e8ad5326d326fd89bd4edacf331765177d165a4ea53a95f76c9ebabf214401",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "name",
+          "type": "string"
+        },
+        "table": "users"
+      }
+    }
+  ]
+}

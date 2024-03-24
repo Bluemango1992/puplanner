@@ -8,3 +8,4 @@ export { default as Navbar } from './Navbar';
 export { default as Button } from './Button';
 export { default as TabBar } from './TabBar';
 export { default as TextField } from './TextField';
+export { default as DistanceCalculator } from './DistanceCalculator';

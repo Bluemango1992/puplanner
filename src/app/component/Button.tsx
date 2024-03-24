@@ -5,6 +5,7 @@ interface ButtonProps {
   onClick?: () => void;
   children: React.ReactNode;
   disabled?: boolean;
+  type?: 'button' | 'submit' | 'reset';
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -13,6 +14,7 @@ const Button: React.FC<ButtonProps> = ({
   onClick,
   children,
   disabled,
+  type = 'button',
 }) => {
   // Tailwind classes for variants using default colors
   const variantClasses = {
@@ -35,7 +37,7 @@ const Button: React.FC<ButtonProps> = ({
 
   return (
     
-    <button className={classes} onClick={onClick} disabled={disabled}>
+    <button className={classes} onClick={onClick} disabled={disabled} type={type}>
       {children}
     </button>
   );

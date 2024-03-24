@@ -11,7 +11,6 @@ interface PageProps {
 const Page: React.FC<PageProps> = () => {
     return (
         <>
-        <Navbar />
         <Container>
             <div className='flex justify-center items-center'>
                 <div className='w-1/2'>

@@ -7,6 +7,7 @@ type TextFieldProps = {
     onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
     error?: boolean;
     helperText?: string;
+    id?: string;
 }
 
 
@@ -18,12 +19,14 @@ const TextField = ({
     value,
     onChange,
     error,
-    helperText
+    helperText,
+    id
 }: TextFieldProps) => {
     return (
         <div className={`flex flex-col gap-1 w-full`}>
             <input 
-                type={type} 
+                type={type}
+                id={id}
                 placeholder={placeholder}
                 value={value}
                 onChange={onChange}

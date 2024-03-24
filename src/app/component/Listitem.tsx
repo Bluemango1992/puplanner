@@ -8,9 +8,9 @@ interface ListItemProps {
 
 const ListItem: React.FC<ListItemProps> = ({ title, caption }) => {
     return (
-        <div>
-            <Typography variant="caption">{title}</Typography>
-            <Typography variant="h5">{caption}</Typography>
+        <div className="flex flex-col px-4 py-2">
+            <Typography variant="h6">{title}</Typography>
+            <Typography variant="caption">{caption}</Typography>
         </div>
     );
 };
