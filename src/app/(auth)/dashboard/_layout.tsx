@@ -3,22 +3,23 @@
 import { useState, useEffect } from 'react';
 import Typography from '@/app/Typography/typograph';
 import Loading from '@/app/loading';
-import generateDateRanges from '../../util/SlotUtil/generateDateRanges';
-import groupDataByDateRange from '../../util/SlotUtil/groupDataByDateRange';
-import addSessionToSlots from '../../util/SlotUtil/addSessionToSlots';
+import { generateDateRanges, groupDataByDateRange, addSessionToSlots } from '../../util/SlotUtil';
 import { Slot, SlotWithSession } from '../../types/Slot';
 import { DateRange } from '../../types/DateRange';
 import DayList from './DayList';
 import DateButton from './DateButton';
 import TabBar from './TabBar';
 
+interface BookingsSlotsProps {
+  basket: Slot[];
+  addToBasket: (slot: Slot) => void;
+}
 
-const BookingsSlots = () => {
+
+const BookingsSlots: React.FC<BookingsSlotsProps> = ({ basket, addToBasket }) => {
 
   const [data, setData] = useState<Slot[] | null>(null);
   const [selectedTabIndex, setSelectedTabIndex] = useState(0);
-  const [basket, setBasket] = useState<Slot[]>([]);
-  const [defaultButton, setDefaultButton] = useState(true);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -130,6 +131,7 @@ const WeekView = ({ slots }: { slots: SlotWithSession[] }) => {
         <div key={index} className="flex flex-1">
           {daySlots.length > 0 ? (
             daySlots.map(slot => (
+              // Pass the `addToBasket` function down to `DateButton`
               <DateButton key={slot.slot_id} slot={slot} onAddToBasket={addToBasket} basket={basket} />
             ))
           ) : (
@@ -152,18 +154,6 @@ const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 const handleTabClick = (dateRangeIndex: number) => {
   setSelectedTabIndex(dateRangeIndex);
 }
-
-// Inside BookingsSlots component
-
-const addToBasket = (slot: Slot) => {
-  // Check if slot is already in the basket to prevent duplicates
-  if (!basket.some(basketSlot => basketSlot.slot_id === slot.slot_id)) {
-    setBasket(prevBasket => [...prevBasket, slot]);
-
-    // Toggle defaultButton when a slot is added to the basket
-    setDefaultButton(false);
-  }
-};
 
 return (
       <div className="flex flex-1 flex-col mt-3">

@@ -1,17 +1,11 @@
 import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
-<<<<<<< HEAD
 import { Navbar } from "../app/component";
 import { ClerkProvider } from '@clerk/nextjs'
 
 import "./globals.css";
 
 const font = Manrope({ subsets: ['latin'] })
-=======
-import "./globals.css";
-
-const inter = Manrope({ subsets: ["latin"] });
->>>>>>> 89079da (first submit)
 
 export const metadata: Metadata = {
   title: "Puplanner",
