@@ -1,0 +1,41 @@
+/* AutosuggestStyles.css */
+
+/* Style for the container */
+.autosuggestContainer {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+/* Styles for the input */
+.autosuggestInput {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Styles for the suggestions container */
+.suggestionsContainer {
+    position: absolute;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    width: 100%;
+    z-index: 2;
+}
+
+/* Styles for individual suggestion items */
+.suggestionItem {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.suggestionItem--highlighted {
+    background-color: #f0f0f0;
+}
+
+/* Style for the label */
+.labelStyle {
+    display: block;
+    margin-bottom: 5px;
+}

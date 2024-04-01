@@ -1,0 +1,127 @@
+{
+  "slots": [
+    {
+      "slot_id": 1,
+      "date": "2024-03-27",
+      "start_time": "09:00",
+      "end_time": "10:00",
+      "status": "Available",
+      "price": 10,
+      "id": "8ab1"
+    },
+    {
+      "slot_id": 2,
+      "date": "2024-04-12",
+      "start_time": "10:00",
+      "end_time": "11:00",
+      "status": "Available",
+      "price": 10,
+      "id": "bc89"
+    },
+    {
+      "slot_id": 3,
+      "date": "2024-03-27",
+      "start_time": "13:00",
+      "end_time": "14:00",
+      "status": "Available",
+      "price": 10,
+      "id": "280d"
+    },
+    {
+      "slot_id": 4,
+      "date": "2024-04-01",
+      "start_time": "14:00",
+      "end_time": "15:00",
+      "status": "Available",
+      "price": 10,
+      "id": "8997"
+    },
+    {
+      "slot_id": 5,
+      "date": "2024-03-25",
+      "start_time": "11:00",
+      "end_time": "12:00",
+      "status": "Available",
+      "price": 12,
+      "id": "8d0d"
+    },
+    {
+      "slot_id": 6,
+      "date": "2024-04-08",
+      "start_time": "15:00",
+      "end_time": "16:00",
+      "status": "Available",
+      "price": 15,
+      "id": "18a0"
+    },
+    {
+      "slot_id": 7,
+      "date": "2024-04-15",
+      "start_time": "09:30",
+      "end_time": "10:30",
+      "status": "Available",
+      "price": 12,
+      "id": "0f17"
+    }
+  ],
+  "users": [
+    {
+      "id": "66bb",
+      "userId": "user_2e6usZQP3IzPNeT8a54Si2hmYi5",
+      "emailAddress": "james.nichol@hotmail.co.uk",
+      "status": "pending"
+    },
+    {
+      "id": "35f8",
+      "userId": "user_2eEbX3xfveYB50xRynI3HbyFt1q",
+      "emailAddress": "nicholjames362@gmail.com",
+      "status": "active "
+    }
+  ],
+  "bookings": [
+    {
+      "id": "f838",
+      "dateTime": "2024-03-28T15:00:00.000Z",
+      "ownerId": "user_2e6usZQP3IzPNeT8a54Si2hmYi5",
+      "firstName": "James",
+      "lastName": "Nichol",
+      "phone": "07581395033",
+      "address": "79, Kings Drive, Stoke Gifford, South Gloucestershire, West of England, England, BS34 8SB, United Kingdom",
+      "type": "meet-and-greet"
+    },
+    {
+      "id": "beb7",
+      "dateTime": "2024-03-28T15:00:00.000Z",
+      "ownerId": "user_2e6usZQP3IzPNeT8a54Si2hmYi5",
+      "firstName": "James",
+      "lastName": "Nichol",
+      "phone": "07581395033",
+      "address": "79, Kings Drive, Golden Hill, Bishopston, Bristol, City of Bristol, West of England, England, BS7 8JQ, United Kingdom",
+      "type": "meet-and-greet"
+    }
+  ],
+  "dogs": [
+    {
+      "id": "59bd",
+      "name": "james",
+      "breed": "westie",
+      "age": 5,
+      "weight": 5
+    },
+    {
+      "id": "7e10",
+      "name": "james",
+      "breed": "westie",
+      "age": 5,
+      "weight": 5
+    },
+    {
+      "id": "cd36",
+      "name": "rex",
+      "breed": "sandy",
+      "age": 3,
+      "weight": 5,
+      "ownerId": "user_2e6usZQP3IzPNeT8a54Si2hmYi5"
+    }
+  ]
+}
