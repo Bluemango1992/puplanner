@@ -2,10 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+<<<<<<< HEAD
 body {
   background-color: #f7fafc;
+=======
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+>>>>>>> 89079da (first submit)
 }
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 89079da (first submit)
