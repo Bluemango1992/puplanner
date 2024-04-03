@@ -1,11 +1,9 @@
+import React from 'react'
+import TempermentForm from '../forms/Temperment'
 
-function page() {
-
-
+const page = () => {
   return (
-    <>
-        hello world
-    </>
+    <div><TempermentForm /></div>
   )
 }
 

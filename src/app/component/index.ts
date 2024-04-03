@@ -12,3 +12,4 @@ export { default as TextArea } from './TextArea';
 export { default as DistanceCalculator } from './DistanceCalculator';
 export { default as Placeholder } from './Placeholder';
 export { default as Modal } from './Modal';
+export { default as ButtonGroup } from './ButtonGroup';

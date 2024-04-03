@@ -8,7 +8,8 @@ import { useRouter } from 'next/navigation';
 
 // Assuming the removeFromBasket function is passed as a prop from the Dashboard component
 export default function Basket({ slots, removeFromBasket }: { slots: Slot[]; removeFromBasket: (slotId: number) => void; }) {
-    const router = useRouter();
+    
+  const router = useRouter();
   
     const [bookingMessage, setBookingMessage] = useState<string | null>(null); // null when no message is to be displayed
     const [isBookingSuccess, setIsBookingSuccess] = useState<boolean | null>(null); // true for success, false for failure, null when no booking has been attempted
@@ -18,17 +19,19 @@ export default function Basket({ slots, removeFromBasket }: { slots: Slot[]; rem
       router.push('/dashboard/confirm');
     };
     
+    console.log(slots);
   
     return (
       <div className="flex flex-col bg-white p-3">
         <Typography variant="h6">Basket</Typography>
         <div className="flex flex-1 flex-col overflow-y-auto">
-          {slots.map(slot => (
-            <div key={slot.slot_id} className="flex flex-1 items-center justify-between p-3 h-11 text-xs border-b border-slate-200">
+        {slots.map(slot => (
+            <div key={slot.slotId} className="flex flex-1 items-center justify-between p-3 h-11 text-xs border-b border-slate-200">
               <span>{slot.date} - {slot.start_time}</span>
-              <button className="text-red-500" onClick={() => removeFromBasket(slot.slot_id)}>Remove</button>
+              <button className="text-red-500" onClick={() => removeFromBasket(slot.slotId)}>Remove</button>
             </div>
           ))}
+
         </div>
         <div className="flex flex-1 items-center justify-between p-3 h-11 text-xs">
           <Typography variant="h6">Total</Typography>

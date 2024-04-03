@@ -1,21 +1,34 @@
-const TabBar = ({
-    tabs = ['Week 1', 'Week 2', 'Week 3', 'Week 4'],
-    onTabClick = () => {}
-  }: {
-    tabs?: string[],
-    onTabClick?: (index: number) => void
-  }) => (
-    <div className="flex flex-1 justify-around">
-      {tabs.map((tab, index) => (
+
+const TabBar = ({ dateRanges, currentDateRange, setCurrentDateRange }) => {
+
+  const formatDateRange = (dateRange) => {
+    const [start, end] = dateRange.dateRange.split(' to ');
+    const startDate = new Date(start);
+    const endDate = new Date(end);
+    const startOptions = { month: 'short', day: 'numeric' };
+    const endOptions = { month: 'short', day: 'numeric' };
+    const formattedStart = startDate.toLocaleString('en-US', startOptions);
+    const formattedEnd = endDate.toLocaleString('en-US', endOptions);
+    return `${formattedStart} - ${formattedEnd}`;
+  };
+
+  return (
+    <div className="flex flex-wrap justify-center items-center gap-2">
+      {dateRanges.map((dateRange, index) => (
         <button
           key={index}
-          className="flex items-center justify-center p-3 bg-white rounded-t-md text-xs hover:bg-slate-200 active:bg-slate-300"
-          onClick={() => onTabClick(index)}
+          className={`px-2 py-1 text-sm rounded-md ${
+            currentDateRange.dateRange === dateRange.dateRange
+              ? 'bg-white text-gray-800'
+              : 'bg-gray-200 text-gray-600'
+          }`}
+          onClick={() => setCurrentDateRange(dateRange)}
         >
-          {tab}
+          <span>{formatDateRange(dateRange)}</span>
         </button>
       ))}
     </div>
   );
+};
 
-  export default TabBar;
+export default TabBar;
