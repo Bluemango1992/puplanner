@@ -1,101 +1,108 @@
-import Image from "next/image";
+'use client'
 
-export default function Home() {
+import React from 'react';
+import { TextField, Typography, Box, Paper } from '@mui/material';
+import ButtonGroup from './ButtonGroup';
+import Button from './Button';
+import { Clock, Dog, Wrench } from 'lucide-react';
+
+
+function DogWalkCRM() {
+  const handleLogin = () => {
+    console.log('Login');
+  };
+
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <Box minHeight="100vh" display="flex" justifyContent="center" alignItems="center">
+      <Paper elevation={3} sx={{ maxWidth: '900px', width: '100%', display: 'flex', overflow: 'hidden' }}>
+        {/* Left Side: CRM Info */}
+        <Box bgcolor="darkorange" p={6} sx={{ width: '50%', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+          <Typography variant="h3" component="h1" color="white" fontWeight="600" gutterBottom>
+            Puplanner
+          </Typography>
+          <Typography variant="body1" color="white" mb={3} gutterBottom>
+            Streamline your dog walking business with our easy-to-use CRM. Manage clients, schedules, and payments all in one place.
+          </Typography>
+          <Box>
+            <Box mb={1} flex={1} display="flex" alignItems="center" gap={1} color="white">
+            <Dog />
+            <Typography variant="body1" color="white" gutterBottom>Track walks and client preferences</Typography>
+            </Box>
+            <Box mb={1} flex={1} display="flex" alignItems="center" gap={1} color="white">
+            <Wrench />
+            <Typography variant="body1" color="white" gutterBottom>Manage billing and payments</Typography>
+            </Box>
+            <Box mb={1} flex={1} display="flex" alignItems="center" gap={1} color="white">
+            <Clock />
+            <Typography variant="body1" color="white" gutterBottom>Schedule and organize routes</Typography>
+            </Box>
+          </Box>
+        </Box>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        {/* Right Side: Login Form */}
+        <Box p={6} sx={{ width: '50%', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+          <Typography variant="h4" component="h2" color="orange" gutterBottom>
+            Welcome
+          </Typography>
+          <Typography variant="body1" color="textSecondary" gutterBottom>
+            Login or sign up to get started
+          </Typography>
+
+          <Box mb={4}>
+            <ButtonGroup />
+          </Box>
+
+          <form noValidate autoComplete="off">
+            <Box mb={3}>
+              <TextField
+                label="Email"
+                type="email"
+                fullWidth
+                variant="outlined"
+                placeholder="m@example.com"
+                InputProps={{
+                  sx: {
+                    '&.Mui-focused fieldset': {
+                      borderColor: 'darkorange',
+                    }
+                  }
+                }}
+              />
+            </Box>
+            <Box mb={3}>
+              <TextField
+                label="Password"
+                type="password"
+                fullWidth
+                variant="outlined"
+                placeholder="Password"
+                InputProps={{
+                  sx: {
+                    '&.Mui-focused fieldset': {
+                      borderColor: 'darkorange',
+                    }
+                  }
+                }}
+              />
+            </Box>
+            <Button
+              fullWidth
+              variant="contained"
+              color="primary"
+              onClick={handleLogin}
+              href="/bookings"
+            >
+              Login
+            </Button>
+          </form>
+
+          <Typography variant="body2" color="textSecondary" mt={4} textAlign="center">
+            Woof! Let’s get started with your dog walking business.
+          </Typography>
+        </Box>
+      </Paper>
+    </Box>
   );
 }
+
+export default DogWalkCRM;
